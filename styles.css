@@ -46,6 +46,14 @@ nav {
     flex: 1;
   }
 
+ main img {
+    width: 1800px;
+    height: 423px;
+    
+    
+  }
+
+
   /* Style the body */
 body {
   margin: 0;
