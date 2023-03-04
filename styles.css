@@ -51,9 +51,11 @@ nav {
     width: 100vw;
     height: 100vh;
     
-    
   }
-
+.logo img{
+  border-radius: 100%;
+  /* clip-path: circle(); */
+}
 
   /* Style the body */
 body {
