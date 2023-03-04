@@ -1,0 +1,92 @@
+/* Style the navbar */
+nav {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+  }
+  nav li {
+    margin-left: 20px;
+  }
+  nav li:first-child {
+    margin-left: 0;
+  }
+  nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  nav li a:hover {
+    background-color: #092652;
+    color: whitesmoke;
+  }
+  /* Style the logo */
+  .logo {
+    margin-right: 20px;
+
+  }
+  .logo img {
+    width: 5%;
+    height: 22%;
+    padding-left: 15px;
+  }
+
+  /* Style the main content */
+  main {
+    padding: 20px;
+    flex: 1;
+  }
+
+  /* Style the body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Style the header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+  /* padding-bottom: 50px; */
+}
+
+/* Style the headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+/* Style the links */
+a {
+  color: #175de8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
