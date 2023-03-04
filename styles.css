@@ -47,6 +47,14 @@ nav {
     margin-bottom: 100px;
   }
 
+ main img {
+    width: 100vw;
+    height: 100vh;
+    
+    
+  }
+
+
   /* Style the body */
 body {
   margin: 0;
