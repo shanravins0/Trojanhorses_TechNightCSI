@@ -3,6 +3,34 @@
   <head>
     <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#generateBtn").click(function() {
+				var title = $("#titleInput").val();
+				var heading = $("#headingInput").val();
+				var content = $("#contentInput").val();
+				var author = $("#authorInput").val();
+				var backgroundImage = $("#backgroundImageInput").val();
+				var textColor = $("#textColorInput").val();
+				var backgroundColor = $("#backgroundColorInput").val();
+				var html = "<!DOCTYPE html>\n<html>\n<head>\n<title>" + title + "</title>\n<meta name='author' content='" + author + "' />\n<style>\nbody {\n";
+				if(backgroundImage !== "") {
+					html += "background-image: url('" + backgroundImage + "');\nbackground-size: cover;\n";
+				} else if(backgroundColor !== "") {
+					html += "background-color: " + backgroundColor + ";\n";
+				}
+				if(textColor !== "") {
+					html += "color: " + textColor + ";\n";
+				}
+				html += "}\n</style>\n</head>\n<body>\n<h1>" + heading + "</h1>\n<p>" + content + "</p>\n</body>\n</html>";
+				$("#generatedCode").text(html);
+			});
+		});
+	</script>
+
+
   </head>
   <body>
     <nav>
@@ -21,6 +49,41 @@
       <img src="https://cdn.discordapp.com/attachments/1008571040097632317/1081471739978072114/theuptownfaith_feeding_poor_children_1ae9e48a-f1c3-4a1b-9825-1069153e3400.png"  class="w3-margin-top home">
       <h1>Welcome to my website</h1>
       <p>This is the homepage of my website. Feel free to look around and check out the other pages.</p>
+
+      <br><br><br><br><br><br>
+
+      <h1 align="center">Website Generator</h1>
+
+      <form>
+        <label for="titleInput">Website Title:</label>
+        <input type="text" id="titleInput" name="titleInput"><br>
+    
+        <label for="headingInput">Heading:</label>
+        <input type="text" id="headingInput" name="headingInput"><br>
+    
+        <label for="contentInput">Content:</label>
+        <textarea id="contentInput" name="contentInput"></textarea><br>
+    
+        <label for="authorInput">Author:</label>
+        <input type="text" id="authorInput" name="authorInput"><br>
+    
+        <label for="backgroundImageInput">Background Image URL:</label>
+        <input type="text" id="backgroundImageInput" name="backgroundImageInput"><br>
+    
+        <label for="textColorInput">Text Color:</label>
+        <input type="color" id="textColorInput" name="textColorInput"><br>
+    
+        <label for="backgroundColorInput">Background Color:</label>
+        <input type="color" id="backgroundColorInput" name="backgroundColorInput"><br>
+    
+        <input type="button" id="generateBtn" value="Generate Website"><br>
+      </form>
+    
+      <p>Generated HTML code:</p>
+      <pre id="generatedCode"></pre>
+
+
+
     </main>
     <footer>
       <p>&copy; 2023 My Website. All rights reserved.</p>
