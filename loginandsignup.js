@@ -176,3 +176,18 @@ loginForm.addEventListener("submit", (e) => {
 //     window.location.href = "index.html";
 //   }
 // });
+
+auth.onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in, display the user's name in the navigation bar
+    
+    document.getElementById("full_name").textContent = user.displayName;
+    document.getElementById("user-email").textContent = user.email;
+    document.getElementById("user-info").style.display = "block";
+    document.getElementById("login-button").style.display = "none";
+  } else {
+    // User is not signed in, display the login button in the navigation bar
+    document.getElementById("user-info").style.display = "none";
+    document.getElementById("login-button").style.display = "block";
+  }
+});
