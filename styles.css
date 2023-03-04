@@ -44,7 +44,6 @@ nav {
   main {
     padding: 20px;
     flex: 1;
-    margin-bottom: 100px;
   }
 
  main img {
@@ -76,12 +75,14 @@ header {
 
 /* Style the footer */
 footer {
-  position: relative;
-  width: 100%;
   background-color: #333;
-  color: #fff;
+  color: white;
+  padding: 20px;
   text-align: center;
-  padding: 10px;
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+  /* padding-bottom: 50px; */
 }
 
 /* Style the headings */
