@@ -47,8 +47,8 @@ nav {
   }
 
  main img {
-    width: 1800px;
-    height: 423px;
+    width: 100vw;
+    height: 100vh;
     
     
   }
