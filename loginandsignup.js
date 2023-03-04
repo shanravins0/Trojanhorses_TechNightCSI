@@ -159,9 +159,20 @@ loginForm.addEventListener("submit", (e) => {
     .signInWithEmailAndPassword(email, password)
     .then(() => {
       console.log("Logged in successfully!");
-      window.location = "https://theuptownfaith.github.io/Trojanhorses_TechNightCSI/"; 
+      window.location = "https://theuptownfaith.github.io/Trojanhorses_TechNightCSI/home.html"; 
     })
     .catch((error) => {
       console.error(error);
     });
 });
+
+// Listen for authentication state changes
+// auth.onAuthStateChanged((user) => {
+//   if (user) {
+//     // User is signed in, show the page content
+//     window.location = "https://theuptownfaith.github.io/Trojanhorses_TechNightCSI/home.html";
+//   } else {
+//     // User is not signed in, redirect to the login page
+//     window.location.href = "index.html";
+//   }
+// });
